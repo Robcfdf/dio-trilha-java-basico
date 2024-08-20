@@ -1,8 +1,10 @@
+import java.util.InputMismatchException;
 import java.util.Locale;
 import java.util.Scanner;
 
 public class ExemploDeExepcionais {
     public static void main(String[] args) {
+        try{
         //criando o objeto scanner
         Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
         
@@ -25,4 +27,8 @@ public class ExemploDeExepcionais {
         System.out.println("Minha altura é " + altura + "cm ");
         scanner.close();   
     }
+    catch( InputMismatchException e){
+        System.out.println("os campos foram informado erroneamente, Por favor digitar de forma correta ");
+    }
+  }
 }
